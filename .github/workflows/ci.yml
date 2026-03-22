@@ -54,3 +54,4 @@ jobs:
         working-directory: cpp
         run: |
           g++ -o test_calculator test_calculator.cpp calculator.cpp
+          ./test_calculator

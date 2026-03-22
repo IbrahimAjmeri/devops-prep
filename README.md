@@ -1,29 +1,67 @@
-# devops-prep
+DevOps Multi-Language CI Project
 
-I built this project to learn by doing instead of just watching tutorials.
+This project tests the same simple calculator logic across C++, Python, and TypeScript, with a CI pipeline set up using GitHub Actions.
 
-The idea was simple: implement the same calculator in multiple languages and understand how testing works in each ecosystem.
+The goal was to understand how testing and CI behave across different languages and ecosystems, not just in isolation.
 
-## What I built
+---
 
-Python calculator with PyTest tests
-- 5/5 tests passing
-- run:
--     cd python
--     py -3.11 -m pytest test_calculator.py -v
+What this project shows
 
-C++ calculator with GTest
-- calculator.cpp and test_calculator.cpp
+- Running tests across multiple languages in one repo
+- Setting up CI pipelines using GitHub Actions
+- Handling different testing tools (PyTest, Jest, C++ asserts)
+- Structuring a repo in a way that scales
 
-TypeScript calculator with Jest
-- calculator.ts and calculator.test.ts
-- run:
--     npx jest
+---
 
-## What I learned
-- Python basics in 1 day
-- How testing works (PyTest, GTest, Jest)
-- Git and GitHub
+Project Structure
 
-## Stack
-Python | C++ | TypeScript | PyTest | GTest | Jest | Git
+devops-prep/
+├── cpp/                 # C++ code + tests
+├── python/              # Python code + pytest
+├── typescript/          # TypeScript code + Jest
+├── .github/workflows/   # CI setup
+└── README.md
+
+---
+
+CI Pipeline
+
+The pipeline runs tests for each language and makes sure everything stays consistent.
+
+Each part can fail independently, which makes debugging easier and reflects how real systems behave when different services are involved.
+
+---
+
+Run locally
+
+Python
+
+cd python
+pip install -r requirements.txt
+pytest
+
+C++
+
+cd cpp
+g++ calculator.cpp test_calculator.cpp -o test
+./test
+
+TypeScript
+
+cd typescript
+npm install
+npm test
+
+---
+
+Why multiple languages?
+
+In real-world systems, different parts are often written in different languages.
+
+This project is a small way to simulate that and understand:
+
+- how testing differs across ecosystems
+- how CI handles multiple environments
+- how to keep behavior consistent across implementations

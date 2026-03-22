@@ -23,7 +23,7 @@ jobs:
       - name: Run Python tests
         run: pytest python/
 
-              - name: Setup Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'

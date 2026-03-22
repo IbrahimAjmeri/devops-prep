@@ -1,14 +1,10 @@
-name: CI Pipeline
-
-on: [push]
-
 jobs:
   test:
     runs-on: ubuntu-latest
 
     defaults:
       run:
-        working-directory: typescript   # ← THIS must be here
+        working-directory: typescript   # ← correct placement
 
     steps:
       - name: Checkout code

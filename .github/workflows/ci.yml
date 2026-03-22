@@ -17,10 +17,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd typescript
           npm install
 
       - name: Run tests
         run: |
-          cd typescript
-          npx jest
+          npm jest
